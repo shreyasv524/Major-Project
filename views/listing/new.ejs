@@ -1,0 +1,40 @@
+<%- layout("/layouts/boilerplate") -%>
+
+    <body>
+        <h3 class="heading offset-2">Enter the details for new listing</h3>
+        <div class="row">
+            <div class="col-8 offset-2">
+                <form action="/listings" method="post" novalidate class="needs-validation">
+            <label for="title">Enter Titles</label>
+                    <input type="text" name="listing[title]" id="title" placeholder="Ex.Ski-In/Ski-Out Chalet" class="form-control"
+                    required>
+        
+            <label for="description">Enter Short Description</label>
+                    <textarea type="text" name="listing[description]" id="description" 
+                        class="form-control" required></textarea>
+
+            <label for="url">Enter Image Url</label>
+                    <input type="text" name="listing[image]" id="url" placeholder="Enter image URL/Link" class="form-control"
+                        >
+
+
+                    <div class="row">
+                        <div class="col-lg-4">
+                    <label for="price">Enter price</label>
+                            <input type="text" name="listing[price]" id="price" placeholder="1200"
+                                class="form-control" required>
+                        </div>
+                        <div class="col-lg-8">
+                    <label for="location">Enter Location</label>
+                            <input type="text" name="listing[location]" id="location" placeholder="Jaipur, Rajasthan"
+                                class="form-control" required>
+                        </div>
+                    </div>
+
+            <label for="country">Enter Country</label>
+                    <input type="text" name="listing[country]" id="country" placeholder="India" class="form-control" required>
+                    <button class="btn add-btn">Add</button>
+                </form>
+            </div>
+        </div>
+    </body>
